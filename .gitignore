@@ -27,3 +27,4 @@ package-lock.json
 .vs/slnx.sqlite
 .vs/chat.susi.ai/v15/.suo
 *.sqlite
+.vs/chat.susi.ai/v15/.suo
