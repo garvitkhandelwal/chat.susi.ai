@@ -21,3 +21,9 @@ jest
 ..env.swp
 package-lock.json
 .vscode/
+.vs/chat.susi.ai/v15/.suo
+*.sqlite
+.vs/chat.susi.ai/v15/.suo
+.vs/slnx.sqlite
+.vs/chat.susi.ai/v15/.suo
+*.sqlite

@@ -23,6 +23,8 @@ import Login from './components/Auth/Login/Login.react';
 import SignUp from './components/Auth/SignUp/SignUp.react';
 import ForgotPassword from './components/Auth/ForgotPassword/ForgotPassword.react';
 import actions from './redux/actions/app';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const muiTheme = getMuiTheme({
   toggle: {
@@ -207,6 +209,17 @@ class App extends Component {
             <Route exact path="/settings" component={Settings} />
             <Route exact path="*" component={NotFound} />
           </Switch>
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnVisibilityChange
+            draggable
+            pauseOnHover
+          />
         </div>
       </MuiThemeProvider>
     );

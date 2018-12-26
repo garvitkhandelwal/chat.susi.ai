@@ -22,6 +22,10 @@ import Menu from 'material-ui/Menu';
 import Paper from 'material-ui/Paper';
 import countryData from 'country-data';
 import ShareOnSocialMedia from './ShareOnSocialMedia';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.min.css';
+
 import {
   voiceList,
   voiceListChange,
@@ -691,6 +695,10 @@ class Settings extends Component {
       path: '/',
       domain: cookieDomain,
     });
+  };
+
+  notify = () => {
+    toast.success('Theme Saved !');
   };
 
   // Store the settings in stores and server
@@ -1708,7 +1716,10 @@ class Settings extends Component {
                   }
                   backgroundColor="#4285f4"
                   labelColor="#fff"
-                  onClick={this.handleSubmit}
+                  onClick={event => {
+                    this.handleSubmit();
+                    this.notify();
+                  }}
                 />
               )}
               {this.state.selectedSetting !== 'Account' ? (
